@@ -2,7 +2,6 @@
 
 Just a simple website for me to get some experience with [Laravel](https://laravel.com).
 Currently following the [Laravel Bootcamp](https://bootcamp.laravel.com/blade/installation) guide with Blade.
-Currently here: 
 
 ## Installation
 
