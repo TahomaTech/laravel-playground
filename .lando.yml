@@ -1,8 +1,20 @@
 name: laravel-playground
 recipe: laravel
-config:
-  php: '8.2'
-  via: nginx
-  webroot: public
-  database: postgres
-  xdebug: true
+
+services:
+  appserver:
+    type: php:8.2
+    webroot: public
+    xdebug: true
+    build_as_root:
+      # Note that you will want to use the script for the major version of node you want to install
+      # See: https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions
+      - curl -sL https://deb.nodesource.com/setup_18.x | bash -
+      - apt-get install -y nodejs
+
+  nginx:
+    type: nginx
+    ssl: true
+
+  database:
+    type: postgres
