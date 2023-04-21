@@ -1,0 +1,8 @@
+name: laravel-playground
+recipe: laravel
+config:
+  php: '8.2'
+  via: nginx
+  webroot: public
+  database: postgres
+  xdebug: true
